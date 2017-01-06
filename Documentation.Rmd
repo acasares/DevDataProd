@@ -135,7 +135,7 @@ Something like: $\frac{dA}{d\alpha} = \frac{dA}{ds} \times \frac{ds}{d\alpha} = 
 
 Now, $\frac{ds}{d\alpha} = 2 * sin(\alpha) * cos(\alpha) = sin(2\alpha)$, and this is zero at $\alpha = 0$ and $\alpha = 90$ degrees. In those cases, the point X is on the base or the heigth of the rectangle. We shall see later if these are maxima or minima.       
 
-But the hard, substantial, part of the derivative is $\frac{dA}{ds}$. To equate it to zero gives an embarrasingly hard equation, to be solved only by some numerical method, that I spare the reader. Instead of this half-closed procedure, we may recurr from the beginning to a numerical solution.      
+But the hard, substantial, part of the derivative is $\frac{dA}{ds}$. To equate it to zero gives an embarrasingly hard equation - to be solved only by some numerical method - that I spare the reader. Instead of this half-closed procedure, we may recurr from the beginning to a numerical solution.      
 
 We can take two routes to find the $\alpha$ giving the maximum or minimum areas, and the value of these extremes. The first, graphical and empirical; the second, thoroughly numerical. Both must give us compatible answers.    
 
