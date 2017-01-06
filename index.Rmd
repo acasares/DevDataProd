@@ -1,7 +1,7 @@
 ---
 title: "Documentation"
 author: "A.Casares M."
-date: "5 de enero de 2017"
+date: "January 5th, 2017"
 output: html_document
 ---
 
@@ -153,7 +153,7 @@ This is a second degree's formula, meaning that its error is roughly proportiona
 
 - c).- Apply an adequate regression model to the dataset of obtained values. In our case, the plot showed a high linearity, so a straightforward linear model is the most obvious option. We'll get a formula $\frac{dA}{d\alpha} = \beta_1\alpha + \beta_0$. That is the regression line.    
 
-- d).- If the squared correlation coefficient $R^2$ is near 1, showing that the adjustement is good, solve the linear equation  $\beta_1\alpha + \beta_0 = 0$, giving us $\alpha = -\frac{\beta_0}{\beta_1}$. This is the angle corresponding to the zero derivative, and, in accordance to Calculus, is the point where the function $A(\alpha)$ takes a maximum or minimum value. In order to know this, we must look at the sign of the second derivative - the slope of the regression line (see how much work spares us this equation) - in this case simply $\beta_1$. If this is negative, the extreme is a maximum.
+- d).- If the squared correlation coefficient $R^2$ is near 1, showing that the adjustement is good, solve the linear equation  $\beta_1\alpha + \beta_0 = 0$, giving us $\alpha = -\frac{\beta_0}{\beta_1}$. This is the angle corresponding to the zero derivative, and, in accordance to Calculus, is the point where the function $A(\alpha)$ takes a maximum or minimum value. In order to know this, we must look at the sign of the second derivative - the slope of the regression line (see how much work spares us this equation) - in this case simply $\beta_1$. If this is negative, as happens in this case, the extreme is a maximum.
 
 - e).- If all goes right, the found root value and respective extreme must strongly agree with the empirical values found in the graphical procedure.     
 
@@ -164,7 +164,7 @@ You have the chance of work with several cases, one of which you must select in 
 
 The second plot corresponds to the graphical procedure, and there you can see the maximum and minimum areas found in that procedure, altogether with the value of the angle and the rectangle's dimensions.Using the slider widget you can try to get the same answer printed on the plot.    
 
-In the third plot you find the derivative's values, making a remarkably linear path (in fact, only because of the approximation inaccuracies the path is not exactly linear), and the regression line altogether, showing their close vecinity. The difference between the root of the regression equation and the intersection of the derivative data points with the x axis are practically indistinguishable. These facts are confirmed numerically by the high value of the adjusted R-squared coefficient, and the concordance to several decimal digits between the greatest areas found in the empirical and numerical proceeding.
+In the third plot you find the derivative's values, making a remarkably linear path (in fact, only because of the approximation inaccuracies the path is not exactly linear), and the regression line altogether, showing their close vecinity. The difference between the root of the regression equation and the intersection of the derivative data points with the x axis is practically indistinguishable. These facts are confirmed numerically by the high value of the adjusted R-squared coefficient, and the concordance to several decimal digits between the greatest areas found in the empirical and numerical proceeding.
 
 The minimal area, as was suggested before, happens to be on the $\alpha = 0$ extreme. It is a global minimum.    
 
