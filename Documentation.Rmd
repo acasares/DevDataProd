@@ -3,8 +3,8 @@ title: "Documentation"
 author: "A.Casares M."
 date: "January 5th, 2017"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Description and analysis: ##
 
-Originally, this problem asked which was the distance to the fourth vertix. Let's answer this question first. See next a plot of the problem, taken the original data: AX = 3, BX = 12, CX = 11. X is an interior point, such as its distances agree with the data. DX is the unknown distance.     
+Originally, this problem asked which was the distance to the fourth vertix. Let's answer this question first. See next a plot of the problem, taken the original data: AX = 3, BX = 12, CX = 11. X is an interior point, such that its distances agree with the data. DX is the unknown distance.     
 
 ```{r fig1, echo=FALSE}
 library(MASS)
@@ -55,8 +55,8 @@ library(MASS)
         title(main = "Fig.1")
 ```    
 
-Since whe don't know the dimensions of the rectangle, nor any angle, it may seem that some data is missing. But with the help of Pithagoras and placing a rectangular coordinate system in A; calling (x,y)
-the coordinates of X in that system, and tracing parallel lines to the sides of the rectange through X, we have: $\overline{XD} = \sqrt{\overline{Xp}^2+\overline{Xo}^2}$.     
+Since whe don't know the dimensions of the rectangle, nor any angle, it may seem that some data is missing. But with the help of Pythagoras and placing a rectangular coordinate system in A; calling (x,y)
+the coordinates of X in that system; and tracing parallel lines to the sides of the rectange through X, we have: $\overline{XD} = \sqrt{\overline{Xp}^2+\overline{Xo}^2}$.     
 
 
 ```{r fig2, echo=FALSE}
@@ -100,25 +100,25 @@ the coordinates of X in that system, and tracing parallel lines to the sides of 
         title(main = "Fig.2")
 ```    
 
-Considering that $\overline{Xp}^2 = \overline{CX}^2 - x^2$, $\overline{Xo}^2 = \overline{BX}^2 - y^2$ and $x^2+y^2 = r^2$, the replacement in the previous equality gives $\overline{XD} = \sqrt{\overline{CX}^2+\overline{BX}^2-(x^2+y^2)} = \sqrt{\overline{CX}^2+\overline{BX}^2-\overline{AX}^2}$    
+Considering that $\overline{Xp}^2 = \overline{CX}^2 - x^2$, $\overline{Xo}^2 = \overline{BX}^2 - y^2$ and $x^2+y^2 = \overline{AX}^2 = r^2$, the replacement in the previous equality gives $\overline{XD} = \sqrt{\overline{CX}^2+\overline{BX}^2-(x^2+y^2)} = \sqrt{\overline{CX}^2+\overline{BX}^2-\overline{AX}^2}$    
 
 Replacing our data, we get $\overline{XD} = \sqrt{11^2+12^2-3^2} = 16$    
 
 And this value doesn't depend on the heigth or base of the rectangle, nor on the position of point X. So, given only the 3 known distances, the fourth is a constant.    
 
-However, depending of the position of X (which can be expressed also by its polar coordinates (r, $\alpha$), the rectangle's dimensions must change to conform with the data and the fourth distance. Let's find which are the base and length of the rectangle for a given $\alpha, 0 \le \alpha \le 90$.    
+However, depending of the position of X (which can be expressed also by its polar coordinates ($r$, $\alpha$), the rectangle's dimensions must change to conform with the data and the fourth distance. Let's find which are the base and length of the rectangle for a given $\alpha$,  $0 \le \alpha \le 90$.    
 
 From Fig.2 is not difficult to deduce that the base $b = \overline{Xo} + x = \sqrt{\overline{BX}^2 - y^2}+x$
 and the height $h = \overline{Xp} + y = \sqrt{\overline{CX}^2 - x^2}+y$.    
-Since $x$ and $y$ can be expressed as funcions of $\alpha$: $x = r \times cos(\alpha)$, $y = r \times sin(\alpha)$, we can finally get b and h as functions of $\alpha$ and the data.    
+Since $x$ and $y$ can be expressed as funcions of $\alpha$:  $x = r \times cos(\alpha)$, $y = r \times sin(\alpha)$, we can finally get $b$ and $h$ as functions of $\alpha$ and the data.    
 
-And so is the area A, which is taking us to the core of the problem:    
+And so is the area $A$, which is taking us to the core of the problem:    
 $A = b\times h = \big(\sqrt{\overline{BX}^2 - y^2}+x\big)\times\big(\sqrt{\overline{CX}^2 - x^2}+y\big)
-\Leftrightarrow$    
+\Longleftrightarrow$    
 
 $A = \big(\sqrt{\overline{BX}^2 - {(r \times sin(\alpha))}^2}+r \times cos(\alpha)\big)\times\big(\sqrt{\overline{CX}^2 - {(r \times cos(\alpha))}^2}+r \times sin(\alpha)\big)$    
 
-And as a function only of $sin(\alpha)$:    
+And as a function of $sin(\alpha)$ only:    
 $A = \big(\sqrt{\overline{BX}^2 - {(r \times sin(\alpha))}^2}+r \times \sqrt{1 - sin^2(\alpha)}\big)\times\big(\sqrt{\overline{CX}^2 - {(r \times \sqrt{1 - sin^2(\alpha)})}^2}+r \times sin(\alpha)\big)$
 
 Even replacing the data of the particular given problem, we have a long formula:    
@@ -133,15 +133,15 @@ So, we have arrived to an expression giving the rectangle's area as a function o
 
 Something like: $\frac{dA}{d\alpha} = \frac{dA}{ds} \times \frac{ds}{d\alpha} = 0$.    
 
-Now, $\frac{ds}{d\alpha} = 2 * sin(\alpha) * cos(\alpha) = sin(2\alpha)$, and this is zero at $\alpha = 0$ and $\alpha = 90$ degrees. In those cases, the point X is on the base or the heigth of the rectangle. We shall see later if these are maxima or minima.       
+Now, $\frac{ds}{d\alpha} = 2 \times sin(\alpha) \times cos(\alpha) = sin(2\alpha)$, and this is zero at $\alpha = 0$ and $\alpha = 90$ degrees. In those cases, the point X is on the base or the heigth of the rectangle. We shall see later if these are maxima or minima.       
 
-But the hard, substantial, part of the derivative is $\frac{dA}{ds}$. To equate it to zero gives an embarrasingly hard equation - to be solved only by some numerical method - that I spare the reader. Instead of this half-closed procedure, we may recurr from the beginning to a numerical solution.      
+But the hard, substantial, part of the derivative is $\frac{dA}{ds}$. To equate it to zero gives an embarrasingly hard equation - to be solved only by some numerical method - that I spare the reader. Instead of this half-closed procedure, we may turn from the beginning to a numerical solution.      
 
 We can take two routes to find the $\alpha$ giving the maximum or minimum areas, and the value of these extremes. The first, graphical and empirical; the second, thoroughly numerical. Both must give us compatible answers.    
 
 **Graphical procedure:**    
 
-- In the computer, take a sample of angle's values covering the whole [0,90] interval, with an adequate increment (say 0.1 degrees), and find the area with the formula or the product $b \times h$ in each point. Using these results, plot the resulting areas to have an image of the behaviour of the curve, and find the maximum and minimum from the data. We can try to do it by hand, but the computer comparison of values will give us the answer, with a precision of one decimal digit for the angle, and several more for the area.    
+- In the computer, take a sample of angle's values covering the whole $[0,90]$ interval, with an adequate increment (say 0.1 degrees), and find the area, with the formula or the product $b \times h$, in each point. Using these results, plot the resulting areas to have an image of the behaviour of the curve, and find the maximum and minimum from the data. We can try to do it by hand, but the computer comparison of values will give us the answer, with a precision of one decimal digit for the angle, and several more for the area.    
 
 **Numerical procedure:**
 
@@ -149,28 +149,28 @@ We can take two routes to find the $\alpha$ giving the maximum or minimum areas,
 There are several formulas to do this computation, giving us approximated values of the derivative in the selected points. For instance, we can use the so called "central differences" formula:     
 $\frac{dA}{d\alpha} = \frac{A_{i+1}-A_{i-1}}{2h}$,  where $h$ is the difference $\alpha_{i+1}-\alpha_{i}$.    
 
-This is a second degree's formula, meaning that its error is roughly proportional to $h^2$, which is good for small $h$. The $h$ value should be rather small, to avoid errors of mathematical modeling; but not too much, because in that case the cancellation errors, typical of floating point representation of real numbers in the computer, are presented. The selected value $h$ = 0.1 may be a good one for this case.
+This is a second degree's formula, meaning that its error is roughly proportional to $h^2$, which is good for small $h$. The $h$ value should be rather small, to avoid errors of mathematical modeling; but not too much, because in that case the cancellation errors, typical of floating point representation of real numbers in the computer, are presented. The selected value $h = 0.1$ may be a good one for this case.
 
 - b).- Plot the found values of the derivative, so we can appreciate its linearity.    
 
 - c).- Apply an adequate regression model to the dataset of obtained values. In our case, the plot showed a high linearity, so a straightforward linear model is the most obvious option. We'll get a formula $\frac{dA}{d\alpha} = \beta_1\alpha + \beta_0$. That is the regression line.    
 
-- d).- If the squared correlation coefficient $R^2$ is near 1, showing that the adjustement is good, solve the linear equation  $\beta_1\alpha + \beta_0 = 0$, giving us $\alpha = -\frac{\beta_0}{\beta_1}$. This is the angle corresponding to the zero derivative, and, in accordance to Calculus, is the point where the function $A(\alpha)$ takes a maximum or minimum value. In order to know this, we must look at the sign of the second derivative - the slope of the regression line (see how much work spares us this equation) - in this case simply $\beta_1$. If this is negative, as happens in this case, the extreme is a maximum.
+- d).- If the squared correlation coefficient $R^2$ is near $1$, showing that the adjustement is good, solve the linear equation  $\beta_1\alpha + \beta_0 = 0$, giving us $\alpha = -\frac{\beta_0}{\beta_1}$. This is the angle corresponding to the zero derivative, and, in accordance to Calculus, is the point where the function $A(\alpha)$ takes a maximum or minimum value. In order to know this, we must look at the sign of the second derivative - the slope of the regression line (see how much work spares us to have its equation) - in this case simply $\beta_1$. If this is negative, as happens to be in this case, the extreme is a maximum.
 
-- e).- If all goes right, the found root value and respective extreme must strongly agree with the empirical values found in the graphical procedure.     
+- e).- If all goes right, the found root value and respective extreme of $A$ must strongly agree with the empirical values found in the graphical procedure.     
 
 ##Implementation:##
 
-The data product shows an implementation of these little theory, making use of R and Shiny.    
-You have the chance of work with several cases, one of which you must select in the beginning. Once selected, you can play with the values of $\alpha$ angle (called BAX), through a provided slider widget, watching how the variation of $\alpha$ changes the dimensions $b$ and $h$ of the rectangle, in order to adjust to the conditions of the problem. These variations also affect the second and third plots.   
+The data product shows an implementation of these little theory, making use of *R* and *Shiny*.    
+You have the chance to work with several cases, one of them picked by you at the beginning. Once selected, you can play with the values of $\alpha$ angle (called $BAX$), through a provided slider control, watching how the variation of $\alpha$ changes the dimensions $b$ and $h$ of the rectangle, in order to adjust to the conditions of the problem. These variations also affect the second and third plots.   
 
-The second plot corresponds to the graphical procedure, and there you can see the maximum and minimum areas found in that procedure, altogether with the value of the angle and the rectangle's dimensions.Using the slider widget you can try to get the same answer printed on the plot.    
+The second plot corresponds to the graphical procedure, and there you can see the maximum and minimum areas found in that procedure, altogether with the value of the angle and the rectangle's dimensions.Using the slider control you can try to get the same answer printed on the plot.    
 
-In the third plot you find the derivative's values, making a remarkably linear path (in fact, only because of the approximation inaccuracies the path is not exactly linear), and the regression line altogether, showing their close vecinity. The difference between the root of the regression equation and the intersection of the derivative data points with the x axis is practically indistinguishable. These facts are confirmed numerically by the high value of the adjusted R-squared coefficient, and the concordance to several decimal digits between the greatest areas found in the empirical and numerical proceeding.
+In the third plot you find the derivative's values, making a remarkably linear path (in fact, only because of the approximation inaccuracies the path is not exactly linear), and the regression line altogether, showing their close vecinity. The difference between the root of the regression equation and the intersection of the derivative data points with the x axis is practically undistinguishable. These facts are confirmed numerically by the high value of the adjusted R-squared coefficient, and the concordance to several decimal digits between the greatest areas found in the empirical and numerical proceeding.
 
 The minimal area, as was suggested before, happens to be on the $\alpha = 0$ extreme. It is a global minimum.    
 
-Finally, if should be noticed the easiness provided by the R's linear modeling function (lm) to the c) and d) points in the numerical method: everything gets done there with only two propositions.     
+Finally, if should be noticed the easiness provided by the *R*'s linear modeling function (*lm*) to the c) and d) points in the numerical method: everything gets done there with only two propositions.     
 
 
 

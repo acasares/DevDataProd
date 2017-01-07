@@ -7,6 +7,8 @@ shinyUI(fluidPage(
               and minimum possible areas:"),
 
   sidebarPanel(
+      helpText(a("(Read the user's documentation here)", href="https://acasares.github.io/DevDataProd/", 
+                 target="_blank")),
       h5('Choose 3 distances configuring the problem:'),
       column(12,
              selectInput("parameters", label = h4("Select box"),
@@ -26,17 +28,15 @@ shinyUI(fluidPage(
     h5('==========================================='),
     br(),
     br(),
-    br(),
-    br(),
     h4('Empirical procedure:'),
     h5('From a sample uniformly spaced of 901 angles in {0,90}, the area has been computed in each
        point.'),
     h5('Finding its maximum value from those results is a good empirical estimation of the desired
        maximum.'),
-    h5('See the max. value and its corresponding angle in the right figure, together with the base
+    h5('See the maximum value and its corresponding angle in the right figure, together with the base
        and heigth of that rectangle.'),
-    h5('You can find the minimum value of the area as a local minimum, in the left extreme of the
-      curve, at alpha = 0 degrees.'),
+    h5('You can find the minimum value of the area as a global minimum, in the left extreme of the
+      curve, at BAX = alpha = 0 degrees.'),
     h5('The green vertical line stands on the angle you chose.'),
     h5('==========================================='),
     br(),
@@ -44,11 +44,11 @@ shinyUI(fluidPage(
     br(),
     br(),
     h4('Numerical procedure:'),
-    h5("To find the greatest surface analitically means to find the area's derivative
+    h5("To find the greatest surface analytically means to find the area's derivative
        as a function of the angle, and to solve the equation resulting from equating it
        to zero."),
     h5("But that's cumbersome, as can be seen in the documentation. So, let's implement a numerical
-       procedure, finding firstly the (approximate) derivatives in each point of the sample. This
+       procedure, finding firstly the (approximate) derivatives at each point of the sample. This
        plot shows their values as a blue line."),
     h5('As you can see, the plotted points show an almost perfect linear pattern. So we can
        fit a linear model on them and obtain the equation of the regression line (magenta).Realize that
