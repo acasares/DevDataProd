@@ -11,15 +11,23 @@ left: 45%
 
 
 ![plot of chunk fig1](PitchPres-figure/fig1-1.png)
+For instance:    
+Let BX = 9, CX = 7, AX = 3
 
 ***
 **Given AX, BX and CX, is the 4th distance DX determined?**  
 
 - Answer: Yes, with Pythagoras'  help.  
-For instance:    
-Let it be BX = 9, CX = 7, AX = 3.     
-Then DX^2 = 81 + 49 - 9 =>    
-DX = 11.
+
+
+```r
+  DX <- sqrt(BX^2+CX^2-AX^2)
+  cat(sprintf('DX = %3.1f',DX))
+```
+
+```
+DX = 11.0
+```
 
 The general question:
 ============================================================
