@@ -11,7 +11,7 @@ shinyServer(function(input, output) {
         CX <- as.numeric(param[3])
         DX <- as.numeric(sqrt(BX^2+CX^2-AX^2))
         sprintf("You selected the distances: r = AX = %2.0f, BX = %2.0f, CX = %2.0f.<br>
-                The distance from X to the fourth vertix, D, comes up since, from geometry:
+                The distance from X to the fourth vertex, D, comes up since, from geometry:
                 (DX)^2 = (BX)^2 + (CX)^2 - (AX)^2.<br>That is, DX = %3.0f.", AX,BX,CX,DX)
     })
 

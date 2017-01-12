@@ -1,7 +1,7 @@
 ---
 title: "Documentation"
 author: "A.Casares M."
-date: "January 5th, 2017"
+date: "January 10th, 2017"
 output:
   html_document: default
   pdf_document: default
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Description and analysis: ##
 
-Originally, this problem asked which was the distance to the fourth vertix. Let's answer this question first. See next a plot of the problem, taken the original data: AX = 3, BX = 12, CX = 11. X is an interior point, such that its distances agree with the data. DX is the unknown distance.     
+Originally, this problem asked which was the distance to the fourth vertex. Let's answer this question first. See next a plot of the problem, taken the original data: AX = 3, BX = 12, CX = 11. X is an interior point, such that its distances agree with the data. DX is the unknown distance.     
 
 ```{r fig1, echo=FALSE}
 library(MASS)
